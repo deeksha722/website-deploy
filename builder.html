@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Builder</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* SAME BACKGROUND AS HOME */
+body {
+    background: linear-gradient(135deg, #667eea, #f7971e);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(0,0,0,0.6);
+}
+
+/* BUILDER AREA */
+.builder-box {
+    height: 400px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    color: black;
+    overflow-y: auto;
+}
+
+/* TOOLBOX */
+.toolbox {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* BUTTON */
+.btn-custom {
+    background: #ff9800;
+    border: none;
+    color: white;
+    border-radius: 20px;
+}
+
+.btn-custom:hover {
+    box-shadow: 0 0 10px orange;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand">SiteBuilder</a>
+
+    <div>
+      <a href="/" class="btn btn-outline-light">Home</a>
+      <a href="/builder" class="btn btn-outline-light">Builder</a>
+      <a href="/features" class="btn btn-outline-light">Features</a>
+      <a href="/contact" class="btn btn-outline-light">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- BUILDER SECTION -->
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">Website Builder</h2>
+
+    <div class="row">
+
+        <!-- TOOLBOX -->
+        <div class="col-md-3 toolbox">
+            <h5>Components</h5>
+
+            <button class="btn btn-custom w-100 mb-2" onclick="addText()">Add Text</button>
+            <button class="btn btn-success w-100 mb-2" onclick="addButton()">Add Button</button>
+            <button class="btn btn-primary w-100 mb-2" onclick="addImage()">Add Image</button>
+        </div>
+
+        <!-- BUILDER AREA -->
+        <div class="col-md-9 builder-box" id="builderArea">
+            <p>Start building your website...</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+
+function addText() {
+    let text = document.createElement("p");
+    text.innerText = "Sample Text";
+    text.style.fontSize = "20px";
+    document.getElementById("builderArea").appendChild(text);
+}
+
+function addButton() {
+    let btn = document.createElement("button");
+    btn.innerText = "Click Me";
+    btn.className = "btn btn-danger m-2";
+    document.getElementById("builderArea").appendChild(btn);
+}
+
+function addImage() {
+    let img = document.createElement("img");
+    img.src = "https://picsum.photos/200";
+    img.style.margin = "10px";
+    img.style.borderRadius = "10px";
+    document.getElementById("builderArea").appendChild(img);
+}
+
+</script>
+
+</body>
+</html>

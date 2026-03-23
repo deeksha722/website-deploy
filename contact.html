@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body {
+    background: linear-gradient(135deg, #667eea, #f7971e);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(0,0,0,0.7);
+}
+
+/* IMAGE */
+.contact-img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* FORM BOX */
+.form-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* BUTTON */
+.btn-custom {
+    background: linear-gradient(45deg, #ff9800, #ff5722);
+    border: none;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.btn-custom:hover {
+    box-shadow: 0 0 15px orange;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white">BuildVerse</a>
+
+    <div>
+      <a href="/" class="btn btn-outline-light">Home</a>
+      <a href="/builder" class="btn btn-outline-light">Builder</a>
+      <a href="/features" class="btn btn-outline-light">Features</a>
+      <a href="/contact" class="btn btn-outline-light">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTACT SECTION -->
+<div class="container mt-5">
+    <div class="row align-items-center">
+
+        <!-- IMAGE -->
+        <div class="col-md-6 mb-4">
+            <img src="{{ url_for('static', filename='images/contact.jpg') }}" class="contact-img">
+        </div>
+
+        <!-- FORM -->
+        <div class="col-md-6">
+            <div class="form-box">
+
+                <h2 class="text-center mb-4">Contact Us</h2>
+
+                <!-- SUCCESS MESSAGE -->
+                {% if success %}
+                <div class="alert alert-success text-center">
+                    Message sent successfully!
+                </div>
+                {% endif %}
+
+                <!-- FORM -->
+                <form method="POST" action="/contact">
+
+                    <input type="text" name="name"
+                    class="form-control mb-3"
+                    placeholder="Enter Name" required>
+
+                    <input type="email" name="email"
+                    class="form-control mb-3"
+                    placeholder="Enter Email" required>
+
+                    <textarea name="message"
+                    class="form-control mb-3"
+                    placeholder="Your Message"></textarea>
+
+                    <button class="btn btn-custom w-100">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center p-3 mt-5" style="background: rgba(0,0,0,0.7); color:white;">
+    <p>© 2026 BuildVerse</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "token": "ghp_YourGeneratedTokenHere",
+  "repo": "yourusername/website-deploy",
+  "branch": "main"
+}

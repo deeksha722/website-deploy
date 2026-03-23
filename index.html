@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body {
+    background: linear-gradient(135deg, #667eea, #f7971e);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(0,0,0,0.6);
+}
+
+/* HERO */
+.hero {
+    padding: 80px 20px;
+}
+
+/* HERO IMAGE */
+.hero img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* BUTTON */
+.btn-custom {
+    background: #ff9800;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+}
+
+.btn-custom:hover {
+    box-shadow: 0 0 15px orange;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    color: black;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* SECTION */
+.section {
+    padding: 60px 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand">BuildVerse</a>
+
+    <div>
+      <a href="/" class="btn btn-outline-light">Home</a>
+      <a href="/builder" class="btn btn-outline-light">Builder</a>
+      <a href="/features" class="btn btn-outline-light">Features</a>
+      <a href="/contact" class="btn btn-outline-light">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<div class="container hero">
+    <div class="row align-items-center">
+
+        <!-- TEXT -->
+        <div class="col-md-6">
+            <h1 class="display-4">Create Stunning Websites</h1>
+            <p class="lead">Drag, Drop & Build 🚀</p>
+
+            <a href="/builder" class="btn btn-custom m-2">Start Building</a>
+            <a href="/features" class="btn btn-light m-2">Explore</a>
+        </div>
+        
+        <!-- IMAGE -->
+        <div class="col-md-6">
+            <img src="https://picsum.photos/500/300" alt="website design">
+        </div>
+
+    </div>
+</div>
+
+<!-- FEATURES -->
+<div class="container section text-center">
+
+    <h2 class="mb-4">Our Features</h2>
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <img src="https://picsum.photos/300/200?1" class="mb-2">
+                <h4>Drag & Drop</h4>
+                <p>Build websites easily</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <img src="https://picsum.photos/300/200?2" class="mb-2">
+                <h4>Live Preview</h4>
+                <p>See changes instantly</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <img src="https://picsum.photos/300/200?3" class="mb-2">
+                <h4>Export Code</h4>
+                <p>Download anytime</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- EXTRA SECTION -->
+<div class="container section">
+    <div class="row align-items-center">
+
+        <div class="col-md-6">
+            <img src="https://picsum.photos/500/300?4" class="w-100 rounded">
+        </div>
+
+        <div class="col-md-6">
+            <h2>Build Faster & Smarter</h2>
+            <p>Create websites quickly with our easy-to-use platform. No coding required.</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center p-3 bg-dark">
+    <p>© 2026 SiteBuilder</p>
+</footer>
+
+</body>
+</html>
